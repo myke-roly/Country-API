@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Country API project
 
-![alt text](https://raw.githubusercontent.com/myke-roly/country-api/master/public/demo.jpg)
+![alt text](https://raw.githubusercontent.com/myke-roly/Country-API/master/public/demo.jpg)
 
 ## Available Scripts
 
