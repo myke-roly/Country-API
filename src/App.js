@@ -1,18 +1,23 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const Title = styled.h1`
-  font-size: 1rem;
-  padding-top: 1rem;
-`;
-
+import { ThemeProvider } from 'styled-components';
+import Header from './containers/header/Header';
+import Main from './containers/main/Main';
+import CountryContext from './context/CountryContext';
+import useTheme from './hooks/useTheme';
 
 const App = () => {
+  const { theme, toggleDarkMode } = useTheme();
+  
   return (
-    <div className="container">
-      <Title>Where is the word?</Title>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CountryContext>
+        <Header theme={theme} toggleDarkMode={toggleDarkMode} />
+
+        
+        <Main theme={theme} />
+      </CountryContext>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
