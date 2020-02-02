@@ -4,8 +4,7 @@ export const WrapperMain = styled.main`
   padding: 5rem 0;
   width: 100%;
   min-height: 100vh;
-  background: ${props =>
-    !props.theme.dark ? 'hsl(0, 0%, 98%)' : 'hsl(207, 26%, 17%)'};
+  background: ${props => !props.theme.dark ? 'hsl(0, 0%, 98%)' : 'hsl(207, 26%, 17%)'};
   color: ${props => (!props.theme.dark ? 'hsl(207, 26%, 17%)' : '#fafafa')};
 `;
 
@@ -44,7 +43,7 @@ export const Input = styled.section`
 
   input {
     color: ${props => (!props.theme.dark ? 'hsl(209, 23%, 22%)' : '#eee')};
-    width: 90%;
+    /* width: 90%; */
     margin-left: 1rem;
     border: none;
     background: transparent;

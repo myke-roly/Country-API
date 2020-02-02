@@ -1,4 +1,9 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
+
+const animate = keyframes`
+  from {height: 0;}
+  to {height: 45%;}
+`;
 
 export const WrapperCountry = styled.section`
   width: 100%;
@@ -14,6 +19,7 @@ export const WrapperCountry = styled.section`
     border-radius: 5px 5px 0 0;
     width: 100%;
     height: 45%;
+    animation: ${animate} 500ms ease;
   }
 
   ul {
@@ -22,7 +28,6 @@ export const WrapperCountry = styled.section`
     h2 {
       font-size: 1.2rem;
       font-weight: bold;
-
     }
 
     li {
@@ -30,5 +35,5 @@ export const WrapperCountry = styled.section`
       opacity: .6;
     }
   }
+`;
 
-`

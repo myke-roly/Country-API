@@ -5,25 +5,30 @@ export const contextCountry = React.createContext();
 contextCountry.displayName = 'Country-Context';
 
 const CountryContext = props => {
-  const urlCountries = 'https://restcountries.eu/rest/v2/all';
-  const countries = useFetch(urlCountries);
 
+  //detail country
+  const [detail, setDetail] = useState('');
+  const detailCountry = useFetch(`https://restcountries.eu/rest/v2/name/${detail}`);
+
+  const detailCountryId = (id) => setDetail(id);
+
+  // all countries
   const [filter, setFilter] = useState('');
   const [filterName, setFilterName] = useState('');
   
-  const urlCountry = `https://restcountries.eu/rest/v2/${filter}/${filterName}`;
-  const country = useFetch(urlCountry)
-
+  const {data} = useFetch(`https://restcountries.eu/rest/v2/${filter}${filterName}`);
+  
   const filterCoountry = (name, fil) => {
     setFilter(name);
     setFilterName(fil);
-  }
+  };
 
   return (
     <contextCountry.Provider value={{
-      countries,
-      country,
-      filterCoountry
+      data,
+      filterCoountry,
+      detailCountry,
+      detailCountryId
     }}>
       {props.children}
     </contextCountry.Provider>
