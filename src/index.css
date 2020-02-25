@@ -2,16 +2,28 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Tahoma;
+  font-family: 'Nunito Sans', 'Tahoma', sans-serif;
 }
 
 body {
-  background-color: #eeeeee;
-  font-size: 16px;
-  color: #555555;
+  background-color: #fafafa;
+  font-size: 14px;
 }
 
 .container {
-  width: 95%;
+  width: 90%;
   margin: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+.fa-arrow-left {
+  padding: 0.5rem 1rem;
+  color: #222;
+}
+
+.link {
+  text-decoration: none;
 }
